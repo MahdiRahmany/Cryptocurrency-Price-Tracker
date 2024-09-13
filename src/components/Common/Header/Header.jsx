@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import TemporaryDrawer from "./Drawer";
 import "./Header.css";
 
@@ -17,9 +18,13 @@ function Header() {
         <a href="/">
           <p className="link">Watchlist</p>
         </a>
-        <a href="/">
-          <p className="link">Dashboard</p>
-        </a>
+        <a href="#">
+            <Button
+              text={"Dashboard"}
+              outlined={true}
+              onClick={() => console.log("btn clicked")}
+            />
+          </a>
       </div>
       <div className="mobile-drawer">
         <TemporaryDrawer />
