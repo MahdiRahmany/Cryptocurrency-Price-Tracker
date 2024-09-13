@@ -1,3 +1,4 @@
+import TemporaryDrawer from "./Drawer";
 import "./Header.css";
 
 function Header() {
@@ -19,6 +20,9 @@ function Header() {
         <a href="/">
           <p className="link">Dashboard</p>
         </a>
+      </div>
+      <div className="mobile-drawer">
+        <TemporaryDrawer />
       </div>
     </div>
   );
