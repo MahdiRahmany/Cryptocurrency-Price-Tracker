@@ -43,7 +43,7 @@
 
 .iphone {
   position: absolute;
-  z-index: 100;
+  z-index: 99;
   min-width: 300px;
   width: 50%;
   right: 0;
