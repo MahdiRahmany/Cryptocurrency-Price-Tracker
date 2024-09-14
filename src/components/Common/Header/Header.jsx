@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import TemporaryDrawer from "./Drawer";
 import "./Header.css";
@@ -9,22 +10,22 @@ function Header() {
         CryptoTracker<span style={{ color: "var(--blue" }}>.</span>
       </h1>
       <div className="links">
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/watchlist">
           <p className="link">Watchlist</p>
-        </a>
-        <a href="#">
-            <Button
-              text={"Dashboard"}
-              outlined={true}
-              onClick={() => console.log("btn clicked")}
-            />
-          </a>
+        </Link>
+        <Link to="/dashboard">
+          <Button
+            text={"Dashboard"}
+            outlined={true}
+            onClick={() => console.log("btn clicked")}
+          />
+        </Link>
       </div>
       <div className="mobile-drawer">
         <TemporaryDrawer />
