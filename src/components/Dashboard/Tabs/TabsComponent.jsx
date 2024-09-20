@@ -4,7 +4,10 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { img } from "framer-motion/client";
+import Grid from "../Grid/Grid";
+import './TabsComponent.css'
+
+
 
 export default function TabsComponent({ coins }) {
   const [value, setValue] = useState("grid");
@@ -39,21 +42,22 @@ export default function TabsComponent({ coins }) {
         </TabList>
 
         <TabPanel value="grid">
-          <div>
-            {coins.map((item, i) => {
-              return (
-                <div key={i}>
-                  <img src={item.image} />
-                  <p >
-                    {i + 1}.{item.name}
-                  </p>
-                </div>
-              );
+          <div className="grid-flex">
+            {coins.map((coin, i) => {
+              return <Grid coin={coin} key={i}/>;
             })}
           </div>
         </TabPanel>
         <TabPanel value="list">
-          <div>mapping for list</div>
+          <div>
+            {coins.map((item, i) => {
+              return (
+                <p key={i}>
+                  {i + 1}.{item.id}
+                </p>
+              );
+            })}
+          </div>
         </TabPanel>
       </TabContext>
     </ThemeProvider>
